@@ -10,10 +10,10 @@ PHP is free to download and use
 
 #### To check your php version you can use the phpversion() function:
 
-     Exm :
-     ````
+     Exm:
+     ```
      echo phpversion();
-     ``````
+     ````
 
 #### PHP Syntax
 
@@ -81,7 +81,7 @@ $x = 5; // global scope
 function myTest() {
 // using x inside this function will generate an error
 echo "<p>Variable x inside function is: $x</p>";
-}
+
 myTest();
 
 echo "<p>Variable x outside function is: $x</p>";
@@ -264,12 +264,12 @@ echo substr($x, 6);
 Start the slice at index 6 and end the slice 5 Positions later
 Exam:
 $x = "Hello World!";
-echo substr($x, 6, 5);
+echo substr ($x, 6, 5);
 
 Use negative indexes to start the slice from the end of the string:
 Exam:
 $x = "Hello World!";
-echo substr($x, -5, 3);
+echo substr ($x, -5, 3);
 
 Numbers
 
@@ -316,7 +316,7 @@ The variable is numeric chack function name: is_numeric()
 
 Exam:
 $ x =2.002;
-var_dump(is_numeric($x))
+var_dump (is_numeric($x))
 
 Casting
 Casting In PHP is done with these statements;
