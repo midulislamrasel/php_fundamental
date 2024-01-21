@@ -11,7 +11,7 @@ PHP is free to download and use
 #### To check your php version you can use the phpversion() function:
 
      Exm :
-     ```javascript
+     ````
      echo phpversion();
      ``````
 
@@ -21,12 +21,12 @@ A PHP script starts with <span style = "color: red" > <?php  </span> and ends wi
 
 ##### Exm :
 
-```javascro[t]
+<pre><code>
 <?php
 echo "Hello World!";
 ?>
 
-```
+</code></pre>
 
 ##### They are used to output data to the screen. <span style = "color: red" > echo </span>
 
