@@ -11,9 +11,7 @@ PHP is free to download and use
 #### To check your php version you can use the phpversion() function:
 
      Exm :
-     ```
      echo phpversion();
-     ``````
 
 #### PHP Syntax
 
