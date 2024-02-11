@@ -574,10 +574,35 @@
 /*====Function with argument====*/
 
   function hello ($name){
-    echo "Hello I am $name";
+    return "Hello I am $name";
   }
 
-  hello ('zura');
+//  $zura = hello ('zura') . '<br>'; 
+//  $Brad =  hello ('Braddd') . '<br>';
+
+//  echo $zura , $Brad;
+
+
+
+
+// ===Crate sum to two functions ===
+// function sum ($num1 , $num2=20){
+//     return $num1 + $num2;
+// }
+// $add = sum (20);
+// echo $add .'<br>';
+
+
+//===Crate function to sum all number using....$nums
+
+function sum (...$nums){
+  $sum = 0;
+  foreach ($nums as $n) {
+    $sum  += $n; 
+  }
+  return $sum;
+}
+echo sum(2,4,6,8,2)
 
 
 
@@ -588,16 +613,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-  
 
 
 
