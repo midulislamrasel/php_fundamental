@@ -572,10 +572,9 @@
 
 
 /*====Function with argument====*/
-
-  function hello ($name){
-    return "Hello I am $name";
-  }
+  // function hello ($name){
+  //   return "Hello I am $name";
+  // }
 
 //  $zura = hello ('zura') . '<br>'; 
 //  $Brad =  hello ('Braddd') . '<br>';
@@ -595,26 +594,38 @@
 
 //===Crate function to sum all number using....$nums
 
-function sum (...$nums){
-  $sum = 0;
-  foreach ($nums as $n) {
-    $sum  += $n; 
-  }
-  return $sum;
-}
-echo sum(2,4,6,8,2)
+// function sum (...$nums){
+//   $sum = 0;
+//   foreach ($nums as $n) {
+//     $sum  += $n; 
+//   }
+//   return $sum;
+// }
+// echo sum(2,4,6,8,2)
+
+
+
+//=====Arrow Function=======
+
+// function sum(...$nums){
+//  return array_reduce($nums, fn($carry , $n)=> $carry + $n);
+// }
+
+// echo sum(2,4,6,7,32,23,44);
 
 
 
 
 
+// ====Print Current Date====
 
+echo date('Y-m-d H:i:s') .'<br>';
+echo date('F j Y, H:i:s');
 
+$dateStrig = 'February 4 2020 12:45:36';
+$parsedDate = data_pars_from_formet('F j Y',$dateStrig);
 
-
-
-
-
+echo $parsedDate;
 
 
 ?>    
