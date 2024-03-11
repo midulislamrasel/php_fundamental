@@ -422,3 +422,6 @@ $a4=array("a"=>"red","b"=>"green","h"=>"blue");
     print_r($result);
 
 `
+
+> [!NOTE]
+> Array list
