@@ -516,6 +516,7 @@ Array ( [0] => 0 [1] => 10 [2] => 20 [3] => 30 [4] => 40 [5] => 50 )
 
 ### output
 [.]This function returns true (1) if the variable is an array, otherwise it returns false/nothing.
+
 b is 1 
 
 
