@@ -423,5 +423,12 @@ $a4=array("a"=>"red","b"=>"green","h"=>"blue");
 
 `
 
-> [!NOTE]
+> [!TIP]
 > Array list
+
+- [x]
+
+```php
+echo "hello"
+
+```
