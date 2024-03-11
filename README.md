@@ -423,7 +423,7 @@ $a4=array("a"=>"red","b"=>"green","h"=>"blue");
 
 `
 
-> [! Array List]
+> [!TIP]
 > Array list
 
 - [x]
