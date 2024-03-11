@@ -429,11 +429,11 @@ $a4=array("a"=>"red","b"=>"green","h"=>"blue");
 #### Assign variables as if they were an array:
 
 #### Syntax
-
 ```php
-list (var1 ,var2 , var3 ....)
+list (var1 ,var2 , var3 ....) = $myArray
 ```
 
+### Example
 ```php
     $my_array = array("Dog","Cat","Horse");
 
@@ -443,5 +443,88 @@ list (var1 ,var2 , var3 ....)
 ```
 
 ### output
-
 I have several animals, a $\color{green}{Dog}$ , a $\color{green}{Cat}$ and a $\color{green}{Horse}$
+
+
+###  Other Example
+```php
+    $my_array = array("Dog","Cat","Horse");
+
+    list($a, , , $b) = $my_array;
+    echo "I have several animals, a $a, a $b and a $c.";
+
+```
+
+### output
+I have several animals, a $\color{green}{Horse}$ , a $\color{green}{Cat}$ and a 
+
+
+<!-- =============== -->
+> [!TIP]
+> Range 
+
+#### The range() function creates an array containing a range of elements.
+#### This function returns an array of elements from low to high.
+
+
+#### Syntax
+
+```php
+    range(low, high, step)
+```
+
+### Example
+```php
+    $letter = range("a","d");
+    print_r ($letter);
+```
+
+### output
+Array ( [0] => a [1] => b [2] => c [3] => d )
+
+
+
+### Other Example
+```php
+    $number = range(0,50,10);
+    print_r ($number);
+```
+
+### output
+Array ( [0] => 0 [1] => 10 [2] => 20 [3] => 30 [4] => 40 [5] => 50 )
+
+
+
+<!-- ========== is_array ============ -->
+
+> [!TIP]
+> is_array
+
+#### Check whether a variable is an array or not:
+
+
+#### Syntax
+```php
+    is_array(variable);
+```
+
+### Example
+```php
+    $b = array("red", "green", "blue");
+    echo "b is " . is_array($b)
+```
+
+### output
+[.]This function returns true (1) if the variable is an array, otherwise it returns false/nothing.
+b is 1 
+
+
+
+### Other Example
+```php
+    $number = range(0,50,10);
+    print_r ($number);
+```
+
+### output
+Array ( [0] => 0 [1] => 10 [2] => 20 [3] => 30 [4] => 40 [5] => 50 )
