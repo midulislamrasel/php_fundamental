@@ -426,7 +426,6 @@ $a4=array("a"=>"red","b"=>"green","h"=>"blue");
 > [!TIP]
 > Array list
 
-- [x]
 
 ```php
     $my_array = array("Dog","Cat","Horse");
@@ -435,4 +434,5 @@ $a4=array("a"=>"red","b"=>"green","h"=>"blue");
     echo "I have several animals, a $a, a $b and a $c.";
     
 ```
- output
+ ###output
+ I have several animals, a Dog, a Cat and a Horse.
