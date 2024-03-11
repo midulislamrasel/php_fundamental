@@ -426,13 +426,22 @@ $a4=array("a"=>"red","b"=>"green","h"=>"blue");
 > [!TIP]
 > Array list
 
+#### Assign variables as if they were an array:
+
+#### Syntax
+
+```php
+list (var1 ,var2 , var3 ....)
+```
 
 ```php
     $my_array = array("Dog","Cat","Horse");
 
     list($a, $b, $c) = $my_array;
     echo "I have several animals, a $a, a $b and a $c.";
-    
+
 ```
- ### output
- I have several animals, a Dog, a Cat and a Horse.
+
+### output
+
+I have several animals, a $\color{green}{Dog}$ , a $\color{green}{Cat}$ and a $\color{green}{Horse}$
