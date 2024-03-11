@@ -521,11 +521,128 @@ b is 1
 
 
 
-### Other Example
+
+<!-- ============================================= -->
+> [!TIP]
+> array_unshift 
+
+#### The array_unshift() function inserts new elements to an array. The new array values will be inserted in the  $\color{green}{beginning}$ of the array.
+#### You can add one value, or as many as you like.
+#### Numeric keys will start at 0 and increase by 1. String keys will remain the same.
+
+#### Syntax
 ```php
-    $number = range(0,50,10);
-    print_r ($number);
+    array_unshift(array, value1, value2, value3, ...)
+```
+
+### Example
+```php
+    $a = [2,4,6,8];
+    $b = array_unshift($a,3);
+    print_r($a)
 ```
 
 ### output
-Array ( [0] => 0 [1] => 10 [2] => 20 [3] => 30 [4] => 40 [5] => 50 )
+Array ( [0] => 3 [1] => 2 [2] => 4 [3] => 6 [4] => 8 )
+
+
+### Other Example
+```php
+    $a = [2,4,6,8];
+    $b = array_unshift($a,3,5,7,);
+    print_r($a) 
+```
+### output
+Array ( [0] => 3 [1] => 5 [2] => 7 [3] => 2 [4] => 4 [5] => 6 [6] => 8 )
+
+
+
+
+
+<!-- =========================array_push==================== -->
+
+> [!TIP]
+> array_push 
+
+#### The array_push() function inserts one or more elements to the  $\color{green}{end}$  of an array.  
+#### You can add one value, or as many as you like.
+#### Even if your array has string keys, your added elements will always have numeric keys.
+
+#### Syntax
+```php
+    array_push(array, value1, value2, ...)
+```
+
+### Example
+```php
+    $a = ["a","b","c","d","e"];
+    $b = array_push($a, "f","g","h" );
+    print_r($a)
+```
+
+### output
+Array ( [0] => a [1] => b [2] => c [3] => d [4] => e [5] => f [6] => g [7] => h )
+
+### Other Example
+```php
+    $a = ["a" => "apple", "b" => "bol", "c" => "cat"];
+    array_push($a, "Dog", "egg");
+    print_r($a);
+
+```
+### output
+Array([a] => apple[b] => bol[c] => cat[0] => Dog[1] => egg)
+
+
+
+<!-- =========================array_shift==================== --> 
+
+> [!TIP]
+> array_shift 
+
+#### The array_shift() function removes the $\color{green}{first}$  element from an array, and returns the value of the removed element.   
+#### array_shift() shifts the first value of the array off and returns it, shortening the array by one element and moving everything down.
+
+#### Syntax
+```php
+    array_shift(array)
+```
+
+### Example
+```php
+    $a = ["a","b","c","d","e"];
+    $b = array_shift($a);
+    print_r($a)
+```
+
+### output
+Array ( [0] => b [1] => c [2] => d [3] => e )
+
+
+
+
+
+
+<!-- =========================array_pop==================== --> 
+
+> [!TIP]
+> array_pop 
+
+#### The array_pop() function deletes the  $\color{green}{last}$  element of an array. 
+#### array_pop() shifts the Last value of the array off and returns it, shortening the array by one element and moving everything down.
+
+#### Syntax
+```php
+    array_pop(array)
+```
+
+### Example
+```php
+    $a = ["a","b","c","d","e"];
+    $b = array_pop($a,);
+    print_r($a)
+```
+
+### output
+Array ( [0] => a [1] => b [2] => c [3] => d )
+
