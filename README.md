@@ -623,6 +623,7 @@ Array ( [0] => b [1] => c [2] => d [3] => e )
 
 
 
+
 <!-- =========================array_pop==================== --> 
 
 > [!TIP]
@@ -646,3 +647,30 @@ Array ( [0] => b [1] => c [2] => d [3] => e )
 ### output
 Array ( [0] => a [1] => b [2] => c [3] => d )
 
+
+
+
+
+
+<!-- =========================array_key_exists==================== --> 
+
+> [!TIP]
+> array_key_exists 
+
+#### The array_pop() function deletes the  $\color{green}{last}$  element of an array. 
+#### array_pop() shifts the Last value of the array off and returns it, shortening the array by one element and moving everything down.
+
+#### Syntax
+```php
+    array_pop(array)
+```
+
+### Example
+```php
+    $a = ["a","b","c","d","e"];
+    $b = array_pop($a,);
+    print_r($a)
+```
+
+### output
+Array ( [0] => a [1] => b [2] => c [3] => d )
