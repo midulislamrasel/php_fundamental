@@ -18,8 +18,8 @@ $user = [
 	'email' => 'admin@phptutorial.net',
 	'is_active' => '1'
 ];
-$properties = array_keys($user, "admin", true);
-print_r($properties);
+	$properties = array_keys($user, "admin", true);
+	print_r($properties);
 
 
 

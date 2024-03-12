@@ -858,7 +858,9 @@ $\color{green}{values of an array.}$
   
 ```
 [-]array=> Required. Specifies the multi-dimensional array (record-set) to use. As of PHP 7.0, this can also be an array of objects.
+
 [-]column_key=>Required. An integer key or a string key name of the column of values to return. This parameter can also be NULL to return complete arrays (useful together with index_key to re-index the array)
+
 [-] index_key=> Optional. The column to use as the index/keys for the returned array
 
 ### Example
