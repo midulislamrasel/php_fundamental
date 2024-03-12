@@ -894,3 +894,364 @@ $\color{green}{values of an array.}$
 
 ### output
 Array ( [0] => Islam [1] => Choudhori [2] => Raddy [3] => Khan )
+
+
+
+<!-- =========================Array_key==================== --> 
+
+
+> [!TIP]
+> array_key
+
+#### The key() function returns the element key from the current internal pointer position.
+
+
+
+#### Syntax
+```php
+    key(array)
+```
+
+### Example
+```php
+    $people=array("Peter","Joe","Glenn","Cleveland");
+    echo "The key from the current position is: " . key($people);)
+```
+
+### output
+  The key from the current position is: 0
+
+
+### Other Example
+```php 
+<?php 
+
+// input array 
+$arr=array("Ram", "Geeta", "Shita", "Ramu"); 
+
+// next function increase the internal pointer 
+// to point next to the current element. 
+next($arr); 
+
+// Here key function prints the index of 
+// the current element of the array. 
+echo "The index of the current element of"." the array is: " . key($arr); 
+                
+?> 
+```
+
+### output
+The index of the current element of the array is: 1
+
+
+
+
+
+
+
+<!-- =========================Array_next==================== --> 
+
+
+> [!TIP]
+> next
+
+#### The next() function $\color{green}{firstly moves the current pointer to the next element and returns the element.}$
+
+
+#### Syntax
+```php
+   next(array)
+```
+
+### Example
+```php
+    $people = array("Peter", "Joe", "Glenn", "Cleveland");
+
+    echo current($people) . "<br>";
+    echo next($people);
+    ```
+
+### output
+    Peter
+    Joe
+
+
+### Other Example
+```php 
+    $arr2 = array("name" => "Amit", "age" => 21, "Gender" => "Male");
+
+    echo current($arr2) . "\n"; //print first element
+    echo next($arr2) ."\n"; //move to next element and print
+    echo next($arr2) ."\n";
+```
+
+### output
+Amit
+21
+Male
+
+
+<!-- =========================current==================== --> 
+
+
+> [!TIP]
+> current
+
+#### The current() function  $\color{green}{returns the value of the current element in an array.}$
+
+
+#### Syntax
+```php
+   current(array)
+```
+
+### Example
+```php
+    $people = array("Peter", "Joe", "Glenn", "Cleveland");
+
+    echo current($people) . "<br>";
+
+    ```
+
+### output
+    Peter
+
+
+### Other Example
+```php 
+<?php 
+
+    $people = array("Peter", "Joe", "Glenn", "Cleveland");
+
+    echo current($people) . "<br>";   
+    echo current($people) . "<br>";         
+?> 
+```
+
+### output
+Peter
+Joe
+
+
+### current , Next , Prev , end, reset, 
+#### Syntax
+```php
+   .......(array)
+```
+
+
+
+```php
+
+$people = array("Peter", "Joe", "Glenn", "Cleveland");
+
+echo current($people) . "<br>";
+echo next($people) . "<br>"; 
+echo current($people) . "<br>"; 
+echo prev($people) . "<br>"; 
+echo end($people) . "<br>"; 
+echo prev($people) . "<br>"; 
+echo current($people) . "<br>"; 
+echo reset($people) . "<br>"; 
+echo next($people) . "<br>" ;
+```
+#### Current $\color{green}{The current element is Peter}$
+#### next $\color{green}{The next element of Peter is Joe}$
+#### current $\color{green}{Now the current element is Joe}$
+#### prev $\color{green}{The previous element of Joe is Peter}$
+#### end $\color{green}{The last element is Cleveland}$
+#### prev $\color{green}{The previous element of Cleveland is Glenn}$
+#### current $\color{green}{Now the current element is Glenn}$
+#### reset $\color{green}{Moves the internal pointer to the first element of the array, which is Peter}$
+#### next $\color{green}{The next element of Peter is Joe}$
+
+### Output
+Peter
+Joe
+Joe
+Peter
+Cleveland
+Glenn
+Glenn
+Peter
+Joe
+
+
+
+
+
+
+
+
+<!-- =========================array_walk==================== --> 
+
+
+> [!TIP]
+> next
+
+#### The array_walk() function runs each array element in a user-defined function. The array's keys and values are parameters in the function.
+
+
+
+#### Syntax
+```php
+   array_walk(array, myfunction, parameter...)
+```
+
+### Example
+```php
+    function myfunction($value,$key,$p)
+    {
+    echo "$key $p $value<br>";
+    }
+    $a=array("a"=>"red","b"=>"green","c"=>"blue");
+    array_walk($a,"myfunction","has the value");
+```
+
+### output
+a has the value red
+b has the value green
+c has the value blue
+
+
+### Other Example
+```php 
+    function myfunction(&$value,$key)
+    {
+    $value="yellow";
+    }
+    $a=array("a"=>"red","b"=>"green","c"=>"blue");
+    array_walk($a,"myfunction");
+    print_r($a);
+```
+
+### output
+Array ( [a] => yellow [b] => yellow [c] => yellow )
+
+
+
+### Other Example
+```php 
+    function myfunction($value,$key)
+    {
+    echo "The key $key has the value $value<br>";
+    }
+    $a=array("a"=>"red","b"=>"green","c"=>"blue");
+    array_walk($a,"myfunction");
+```
+
+### output
+The key a has the value red
+The key b has the value green
+The key c has the value blue
+
+
+
+
+
+<!-- =========================Array_count==================== --> 
+
+
+> [!TIP]
+> count
+
+#### The count() function  $\color{green}{returns the number of elements in an array}$
+
+
+#### Syntax
+```php
+   count(array, mode)
+```
+
+### Example
+```php
+   $cars=array("Volvo","BMW","Toyota");
+    echo count($cars);
+```
+
+### output
+3
+
+
+
+
+<!--====================Array_count_values================ --> 
+
+
+> [!TIP]
+>array_count_values
+
+#### The array_count_values() function counts all the values of an array. $\color{green}{counts all the values of an array.}$
+
+
+#### Syntax
+```php
+   array_count_values(array)
+```
+
+### Example
+```php
+   $a=array("A","B" ,"Cat","Dog","A","Cat", "Dog","Dog","Dog");
+    print_r(array_count_values($a));
+```
+
+### output
+Array ( [A] => 2 [B] => 1 [Cat] => 2 [Dog] => 4 )
+
+
+
+
+<!--====================array_unique==========---->
+
+
+> [!TIP]
+>array_unique
+
+#### The array_unique() function removes duplicate values from an array. If two or more array values are the same, the first appearance will be kept and the other will be removed.
+
+
+
+#### Syntax
+##### sorttyp -Optional 
+```php
+   array_unique(array, sorttype)
+```
+
+### Example
+```php
+   $a=array("a"=>"red","b"=>"green","c"=>"red");
+    print_r(array_unique($a));
+```
+
+### output
+Array ( [a] => red [b] => green )
+
+
+
+
+
+
+
+<!--==========array_revers=======---->
+
+
+> [!TIP]
+>array_revers
+
+#### The array_reverse() function returns an array in the reverse order.
+
+
+
+#### Syntax 
+```php
+   array_reverse(array, preserve)
+```
+
+### Example
+```php
+   $a=array("a"=>"Volvo","b"=>"BMW","c"=>"Toyota");
+        print_r(array_reverse($a));
+```
+
+### output
+Array ( [c] => Toyota [b] => BMW [a] => Volvo )
