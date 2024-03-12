@@ -657,20 +657,238 @@ Array ( [0] => a [1] => b [2] => c [3] => d )
 > [!TIP]
 > array_key_exists 
 
-#### The array_pop() function deletes the  $\color{green}{last}$  element of an array. 
-#### array_pop() shifts the Last value of the array off and returns it, shortening the array by one element and moving everything down.
+#### The array_key_exists() function checks an  $\color{green}{array for a specified key,}$ array for a specified key, and returns true if the key exists and false if the key does not exist.
 
 #### Syntax
 ```php
-    array_pop(array)
+    array_key_exists(key, array)
+    array_key_exists($index, array)
 ```
 
 ### Example
+
 ```php
-    $a = ["a","b","c","d","e"];
-    $b = array_pop($a,);
-    print_r($a)
+    $a=array("A"=>"XC90","B"=>"X5","C"=>"Xe50", "D"=>"Xc80");
+        if (array_key_exists("D",$a)){
+          echo "Key exists!";
+          }else{
+          echo "Key does not exist!";
+          }
 ```
 
 ### output
-Array ( [0] => a [1] => b [2] => c [3] => d )
+Key exists!
+
+
+### Other Example
+#### array key case sensitive 
+
+```php
+    $a=array("A"=>"XC90","B"=>"X5","C"=>"Xe50", "D"=>"Xc80");
+        if (array_key_exists("a",$a)){
+          echo "Key exists!";
+          }else{
+          echo "Key does not exist!";
+```
+### output
+Key does not exist!
+
+#### Check if the integer key "0" exists in an array:
+```php
+  $b = ["A","B","C","D","E","F"];
+        if(array_key_exists(0,$b)){
+            echo "Key Exists";
+        }else{
+            echo "key does not exist";
+        }
+```
+### output
+Key Exists
+
+
+
+<!-- =========================array_search==================== --> 
+
+> [!TIP]
+> array_search 
+
+#### The array_search() function search an array for a value and returns the key.. $\color{green}{array for a value and returns the key.. }$  
+
+#### Syntax
+```php
+   array_search(value, array)
+ // <!-- ==(Optional)== -->
+   array_search(value, array, strict)
+```
+
+#### Optional. If this parameter is set to TRUE, then this function will search for identical elements in the array. Possible values:
+[-] true
+[-] false-Default
+
+### Example
+```php
+
+    $array = array(45, 5, 1, 22, 22, 10, 10);
+    $value = "10";
+    echo array_search($value , $array )
+// <!-- ============ -->
+    $a = ['3'=>"B",'4'=>"E",'5'=>"D",'7'=>"K",'6'=>"L"];
+    echo array_search("B" ,$a );
+    
+```
+
+### output
+5
+3
+
+### Other Example 
+```php
+    $arr = array("MAC", "WINDOWS","LINUX", "SOLARIS");
+    $search = "LINUX";
+    echo array_search($search,$arr,true);
+```
+### output 
+2
+
+
+
+
+
+
+<!-- =========================array_key==================== --> 
+
+> [!TIP]
+> array_key 
+
+#### The array_keys() function returns an array containing the keys. 
+$\color{green}{array for a specified key,}$ 
+
+
+#### Syntax
+```php
+    array_keys(input_array, search_key_value, strict)
+  
+```
+[-] valu =>  Optional. You can specify a value, then only the keys with this value are returned
+[-] stroct =>  Optional. Used with the value parameter. Possible values:
+
+### Example
+
+```php
+    $a =  ["A"=>"Apple","B"=>"Bol","C"=>"Cat"];
+    print_r( array_keys($a));
+    ```
+
+### output
+Array ( [0] => A [1] => B [2] => C )
+
+
+```php
+    $$b =  ["A"=>"Apple","B"=>"Bol","C"=>"Cat"];
+    print_r( array_keys($b, "Bol"));
+    ```
+
+### output
+Array ( [0] => B )
+
+
+```php
+    $user = [
+        'username' => 'admin',
+        'email' => 'admin@phptutorial.net',
+        'is_active' => '1'
+    ];
+    $properties = array_keys($user, "admin", true);
+    print_r($properties);
+```
+
+### output
+Array ( [0] => username )
+
+
+
+
+<!-- =========================array_values==================== --> 
+
+> [!TIP]
+> array_values 
+
+#### The array_values() function returns an array containing all the 
+$\color{green}{values of an array.}$ 
+
+
+#### Syntax
+```php
+    array_values($array)
+  
+```
+[-] The returned array will have numeric keys, starting at 0 and increase by 1.
+
+
+### Example
+```php
+  $fruits = [
+    'apple' => 'Apple',
+    'orange' => 'Orange',
+    'banana' => 'Banana'
+    ];
+    print_r(array_values($fruits,))
+```
+
+### output
+Array ( [0] => Apple [1] => Orange [2] => Banana )
+
+
+
+
+
+
+<!-- =========================array_column==================== --> 
+
+> [!TIP]
+> array_column 
+
+#### The array_values() function returns an array containing all the 
+$\color{green}{values of an array.}$ 
+
+
+#### Syntax
+```php
+    array_values($array)
+  
+```
+[-]array=> Required. Specifies the multi-dimensional array (record-set) to use. As of PHP 7.0, this can also be an array of objects.
+[-]column_key=>Required. An integer key or a string key name of the column of values to return. This parameter can also be NULL to return complete arrays (useful together with index_key to re-index the array)
+[-] index_key=> Optional. The column to use as the index/keys for the returned array
+
+### Example
+```php
+        $a = [
+        $b =[
+            "id" => "2323",
+            "First Name"=>"Midul",
+            "Last Name"=>"Islam"
+        ],
+        $c =[
+            "id" => "323",
+            "First Name"=>"Midul",
+            "Last Name"=>"Choudhori"
+        ],
+        $d =[
+            "id" => "7323",
+            "First Name"=>"Midul",
+            "Last Name"=>"Raddy"
+        ],
+        $e =[
+            "id" => "9323",
+            "First Name"=>"Midul",
+            "Last Name"=>"Khan"
+        ],
+    ];
+
+    $lastName = array_column($a,"Last Name");
+    print_r($lastName)
+```
+
+### output
+Array ( [0] => Islam [1] => Choudhori [2] => Raddy [3] => Khan )
