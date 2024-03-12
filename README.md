@@ -1255,3 +1255,96 @@ Array ( [a] => red [b] => green )
 
 ### output
 Array ( [c] => Toyota [b] => BMW [a] => Volvo )
+
+
+
+
+
+<!--==========array_fille=======---->
+
+
+> [!TIP]
+>array_fille
+
+#### The array_flip() function flips/exchanges all keys with their associated values in an array.
+
+
+
+#### Syntax 
+```php
+   array array_flip($array)
+```
+
+### Example
+```php
+    $a1=array_fill(3, 5,"blue");
+    print_r($a1);
+    echo "<br>";
+
+    $b1=array_fill(0,5,"red");
+    print_r($b1);
+```
+
+### output
+Array ( [3] => blue [4] => blue [5] => blue [6] => blue [7] => blue )
+Array ( [0] => red [1] => red [2] => red [3] => red [4] => red
+
+
+
+
+
+<!--==========Sorting Arrays=======---->
+
+
+> [!TIP]
+>Sorting array
+>sort, rsort, asort, ksort, arsort,krsort,
+
+#### Syntax 
+```php
+   sorign_name($array)
+```
+
+
+#### sort() - sort arrays in ascending order
+#### rsort() - sort arrays in descending order
+#### asort() - sort associative arrays in ascending order, according to the value
+#### ksort() - sort associative arrays in ascending order, according to the key
+#### arsort() - sort associative arrays in descending order, according to the value
+#### krsort() - sort associative arrays in descending order, according to the key
+
+
+### Example
+```php
+    $cars = array("Volvo", "BMW", "Toyota");
+    sort($cars);
+    print_r( $cars );
+    echo "<br>";
+    $cars = array("Volvo", "BMW", "Toyota");
+    rsort($cars);
+    print_r( $cars );
+    echo "<br>";
+    $age = array("Aeter"=>"65", "Ben"=>"37", "Joe"=>"43");
+    asort($age);
+    print_r( $age );
+    echo "<br>";
+    $age = array("Peter"=>"35", "Ben"=>"87", "Joe"=>"43");
+    ksort($age);
+    print_r( $age );
+    echo "<br>";
+    $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+    arsort($age);
+    print_r( $age );
+    echo "<br>";
+    $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+    krsort($age);
+    print_r( $cars )
+```
+
+### Output
+Array ( [0] => BMW [1] => Toyota [2] => Volvo )
+Array ( [0] => Volvo [1] => Toyota [2] => BMW )
+Array ( [Ben] => 37 [Joe] => 43 [Aeter] => 65 )
+Array ( [Ben] => 87 [Joe] => 43 [Peter] => 35 )
+Array ( [Joe] => 43 [Ben] => 37 [Peter] => 35 )
+Array ( [0] => Volvo [1] => Toyota [2] => BMW )
