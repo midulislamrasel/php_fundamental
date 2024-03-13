@@ -1348,3 +1348,124 @@ Array ( [Ben] => 37 [Joe] => 43 [Aeter] => 65 )
 Array ( [Ben] => 87 [Joe] => 43 [Peter] => 35 )
 Array ( [Joe] => 43 [Ben] => 37 [Peter] => 35 )
 Array ( [0] => Volvo [1] => Toyota [2] => BMW )
+
+
+
+
+<!--=========array_mergs===========--->
+
+
+> [!TIP]
+>array_merge
+
+#### The array_merge() function merges one or more arrays into one array.
+
+
+#### Syntax 
+```php
+   array_merge(array1, array2, array3, ...)
+ ```
+
+ ### Example
+```PHP
+    $a1=array("red","green");
+    $a2=array("blue","yellow");
+
+    print_r(array_merge($a1,$a2));
+    echo "<br>";
+
+    $my_array1 = array("size" => "bioiog", 2,3 );
+    $my_array2 = array("a", "b", "size" => "ium","shape" => "circle", 4);
+    $res = array_merge($my_array1, $my_array2);
+```
+
+[-] same key than retrun last array key valu other key valo not return 
+
+#### Output
+Array ( [0] => red [1] => green [2] => blue [3] => yellow )
+Array ( [size] => ium [0] => 2 [1] => 3 [2] => a [3] => b [shape] => circle [4] => 4 )
+
+
+
+
+
+
+
+
+<!--=========shuffle====--->
+
+
+> [!TIP]
+>shuffle
+
+#### The shuffle() function randomizes the order of the elements in the array.
+
+
+#### Syntax 
+```php
+   shuffle(array)
+ ```
+
+ ### Example
+```PHP
+    $my_array = array("red","green","blue","yellow","purple");
+
+    shuffle($my_array);
+    print_r($my_array);
+```
+#### Output
+Array ( [0] => yellow [1] => purple [2] => red [3] => blue [4] => green )
+
+
+
+
+
+<!-- =============array_combine================ -->
+
+
+> [!TIP]
+>array_combine
+
+#### Create an array by using the elements from one "keys" array and one "values" array:
+
+
+
+#### Syntax 
+```php
+   array_combine(keys, values)
+ ```
+
+ ### Example
+```PHP
+    $fname = ["Peter", "Ben", " Joe"];
+    $age = [23,45,42];
+
+```
+#### Output
+Array ( [Peter] => 23 [Ben] => 45 [ Joe] => 42 )
+
+
+
+
+<!-- =============array_slice================ -->
+
+
+> [!TIP]
+>array_slice
+
+#### The array_slice() function returns selected parts of an array.
+
+
+#### Syntax 
+```php
+   array_slice($array, $start_point, $slicing_range, preserve)
+ ```
+
+ ### Example
+```PHP
+    $a=array("red","green","blue","yellow","brown");
+    print_r(array_slice($a,1,2));
+
+```
+#### Output
+Array ( [0] => green [1] => blue )
