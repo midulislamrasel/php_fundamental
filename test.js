@@ -78,3 +78,27 @@ console.log(newval);
 var hotval = parseInt(laStringa);
 console.log(hotval);
 console.log("Your total is:$" + (newval + hotval));
+
+// prompt;
+
+x = 3 * "15";
+console.log(x);
+
+var a = 10,
+  b = "20pcs";
+var c = a * b;
+console.log(c);
+
+arr = new Array(1, 2, 3);
+console.log(arr);
+
+// x = 10;
+// y = myStr(x, 2);
+// console.log(y);
+
+function retval() {
+  var a = 20;
+  return a;
+}
+
+console.log(retval() + 30);
