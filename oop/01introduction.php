@@ -1,7 +1,4 @@
 <?php
-
-echo "Hello "  . "\n" ;
-
 class calculation{
     public $a, $b, $c;
 
@@ -26,8 +23,8 @@ $sub->a = 50;
 $sub->b = 40;
 
 
-echo "sub value sub : " . $sub->sub() . " <br> ";
-echo " sum value of : " . $sum->addison() . " <br>";  
-echo "addison value in  sub ". $sub->addison();
+echo "sub value sub : " . $sub->sub() ."\n" ;
+echo "sum value of : " . $sum->addison() .PHP_EOL;  
+echo "addison value in  sub ". $sub->addison() ."\n";
 
 ?>

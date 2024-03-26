@@ -429,11 +429,13 @@ $a4=array("a"=>"red","b"=>"green","h"=>"blue");
 #### Assign variables as if they were an array:
 
 #### Syntax
+
 ```php
 list (var1 ,var2 , var3 ....) = $myArray
 ```
 
 ### Example
+
 ```php
     $my_array = array("Dog","Cat","Horse");
 
@@ -443,10 +445,11 @@ list (var1 ,var2 , var3 ....) = $myArray
 ```
 
 ### output
+
 I have several animals, a $\color{green}{Dog}$ , a $\color{green}{Cat}$ and a $\color{green}{Horse}$
 
+### Other Example
 
-###  Other Example
 ```php
     $my_array = array("Dog","Cat","Horse");
 
@@ -456,16 +459,17 @@ I have several animals, a $\color{green}{Dog}$ , a $\color{green}{Cat}$ and a $\
 ```
 
 ### output
-I have several animals, a $\color{green}{Horse}$ , a $\color{green}{Cat}$ and a 
 
+I have several animals, a $\color{green}{Horse}$ , a $\color{green}{Cat}$ and a
 
 <!-- =============== -->
+
 > [!TIP]
-> Range 
+> Range
 
 #### The range() function creates an array containing a range of elements.
-#### This function returns an array of elements from low to high.
 
+#### This function returns an array of elements from low to high.
 
 #### Syntax
 
@@ -474,26 +478,26 @@ I have several animals, a $\color{green}{Horse}$ , a $\color{green}{Cat}$ and a
 ```
 
 ### Example
+
 ```php
     $letter = range("a","d");
     print_r ($letter);
 ```
 
 ### output
+
 Array ( [0] => a [1] => b [2] => c [3] => d )
 
-
-
 ### Other Example
+
 ```php
     $number = range(0,50,10);
     print_r ($number);
 ```
 
 ### output
+
 Array ( [0] => 0 [1] => 10 [2] => 20 [3] => 30 [4] => 40 [5] => 50 )
-
-
 
 <!-- ========== is_array ============ -->
 
@@ -502,40 +506,44 @@ Array ( [0] => 0 [1] => 10 [2] => 20 [3] => 30 [4] => 40 [5] => 50 )
 
 #### Check whether a variable is an array or not:
 
-
 #### Syntax
+
 ```php
     is_array(variable);
 ```
 
 ### Example
+
 ```php
     $b = array("red", "green", "blue");
     echo "b is " . is_array($b)
 ```
 
 ### output
+
 [.]This function returns true (1) if the variable is an array, otherwise it returns false/nothing.
 
-b is 1 
-
-
-
+b is 1
 
 <!-- ============================================= -->
-> [!TIP]
-> array_unshift 
 
-#### The array_unshift() function inserts new elements to an array. The new array values will be inserted in the  $\color{green}{beginning}$ of the array.
+> [!TIP]
+> array_unshift
+
+#### The array_unshift() function inserts new elements to an array. The new array values will be inserted in the $\color{green}{beginning}$ of the array.
+
 #### You can add one value, or as many as you like.
+
 #### Numeric keys will start at 0 and increase by 1. String keys will remain the same.
 
 #### Syntax
+
 ```php
     array_unshift(array, value1, value2, value3, ...)
 ```
 
 ### Example
+
 ```php
     $a = [2,4,6,8];
     $b = array_unshift($a,3);
@@ -543,37 +551,40 @@ b is 1
 ```
 
 ### output
+
 Array ( [0] => 3 [1] => 2 [2] => 4 [3] => 6 [4] => 8 )
 
-
 ### Other Example
+
 ```php
     $a = [2,4,6,8];
     $b = array_unshift($a,3,5,7,);
-    print_r($a) 
+    print_r($a)
 ```
+
 ### output
+
 Array ( [0] => 3 [1] => 5 [2] => 7 [3] => 2 [4] => 4 [5] => 6 [6] => 8 )
-
-
-
-
 
 <!-- =========================array_push==================== -->
 
 > [!TIP]
-> array_push 
+> array_push
 
-#### The array_push() function inserts one or more elements to the  $\color{green}{end}$  of an array.  
+#### The array_push() function inserts one or more elements to the $\color{green}{end}$ of an array.
+
 #### You can add one value, or as many as you like.
+
 #### Even if your array has string keys, your added elements will always have numeric keys.
 
 #### Syntax
+
 ```php
     array_push(array, value1, value2, ...)
 ```
 
 ### Example
+
 ```php
     $a = ["a","b","c","d","e"];
     $b = array_push($a, "f","g","h" );
@@ -581,34 +592,39 @@ Array ( [0] => 3 [1] => 5 [2] => 7 [3] => 2 [4] => 4 [5] => 6 [6] => 8 )
 ```
 
 ### output
+
 Array ( [0] => a [1] => b [2] => c [3] => d [4] => e [5] => f [6] => g [7] => h )
 
 ### Other Example
+
 ```php
     $a = ["a" => "apple", "b" => "bol", "c" => "cat"];
     array_push($a, "Dog", "egg");
     print_r($a);
 
 ```
+
 ### output
+
 Array([a] => apple[b] => bol[c] => cat[0] => Dog[1] => egg)
 
-
-
-<!-- =========================array_shift==================== --> 
+<!-- =========================array_shift==================== -->
 
 > [!TIP]
-> array_shift 
+> array_shift
 
-#### The array_shift() function removes the $\color{green}{first}$  element from an array, and returns the value of the removed element.   
+#### The array_shift() function removes the $\color{green}{first}$ element from an array, and returns the value of the removed element.
+
 #### array_shift() shifts the first value of the array off and returns it, shortening the array by one element and moving everything down.
 
 #### Syntax
+
 ```php
     array_shift(array)
 ```
 
 ### Example
+
 ```php
     $a = ["a","b","c","d","e"];
     $b = array_shift($a);
@@ -616,28 +632,26 @@ Array([a] => apple[b] => bol[c] => cat[0] => Dog[1] => egg)
 ```
 
 ### output
+
 Array ( [0] => b [1] => c [2] => d [3] => e )
 
-
-
-
-
-
-
-<!-- =========================array_pop==================== --> 
+<!-- =========================array_pop==================== -->
 
 > [!TIP]
-> array_pop 
+> array_pop
 
-#### The array_pop() function deletes the  $\color{green}{last}$  element of an array. 
+#### The array_pop() function deletes the $\color{green}{last}$ element of an array.
+
 #### array_pop() shifts the Last value of the array off and returns it, shortening the array by one element and moving everything down.
 
 #### Syntax
+
 ```php
     array_pop(array)
 ```
 
 ### Example
+
 ```php
     $a = ["a","b","c","d","e"];
     $b = array_pop($a,);
@@ -645,21 +659,18 @@ Array ( [0] => b [1] => c [2] => d [3] => e )
 ```
 
 ### output
+
 Array ( [0] => a [1] => b [2] => c [3] => d )
 
-
-
-
-
-
-<!-- =========================array_key_exists==================== --> 
+<!-- =========================array_key_exists==================== -->
 
 > [!TIP]
-> array_key_exists 
+> array_key_exists
 
-#### The array_key_exists() function checks an  $\color{green}{array for a specified key,}$ array for a specified key, and returns true if the key exists and false if the key does not exist.
+#### The array_key_exists() function checks an $\color{green}{array for a specified key,}$ array for a specified key, and returns true if the key exists and false if the key does not exist.
 
 #### Syntax
+
 ```php
     array_key_exists(key, array)
     array_key_exists($index, array)
@@ -677,11 +688,12 @@ Array ( [0] => a [1] => b [2] => c [3] => d )
 ```
 
 ### output
+
 Key exists!
 
-
 ### Other Example
-#### array key case sensitive 
+
+#### array key case sensitive
 
 ```php
     $a=array("A"=>"XC90","B"=>"X5","C"=>"Xe50", "D"=>"Xc80");
@@ -690,10 +702,13 @@ Key exists!
           }else{
           echo "Key does not exist!";
 ```
+
 ### output
+
 Key does not exist!
 
 #### Check if the integer key "0" exists in an array:
+
 ```php
   $b = ["A","B","C","D","E","F"];
         if(array_key_exists(0,$b)){
@@ -702,19 +717,20 @@ Key does not exist!
             echo "key does not exist";
         }
 ```
+
 ### output
+
 Key Exists
 
-
-
-<!-- =========================array_search==================== --> 
+<!-- =========================array_search==================== -->
 
 > [!TIP]
-> array_search 
+> array_search
 
-#### The array_search() function search an array for a value and returns the key.. $\color{green}{array for a value and returns the key.. }$  
+#### The array_search() function search an array for a value and returns the key.. $\color{green}{array for a value and returns the key.. }$
 
 #### Syntax
+
 ```php
    array_search(value, array)
  // <!-- ==(Optional)== -->
@@ -722,10 +738,12 @@ Key Exists
 ```
 
 #### Optional. If this parameter is set to TRUE, then this function will search for identical elements in the array. Possible values:
+
 [-] true
 [-] false-Default
 
 ### Example
+
 ```php
 
     $array = array(45, 5, 1, 22, 22, 10, 10);
@@ -734,47 +752,48 @@ Key Exists
 // <!-- ============ -->
     $a = ['3'=>"B",'4'=>"E",'5'=>"D",'7'=>"K",'6'=>"L"];
     echo array_search("B" ,$a );
-    
+
 ```
 
 ### output
+
 5
 3
 
-### Other Example 
+### Other Example
+
 ```php
     $arr = array("MAC", "WINDOWS","LINUX", "SOLARIS");
     $search = "LINUX";
     echo array_search($search,$arr,true);
 ```
-### output 
+
+### output
+
 2
 
-
-
-
-
-
-<!-- =========================array_key==================== --> 
+<!-- =========================array_key==================== -->
 
 > [!TIP]
-> array_key 
+> array_key
 
-#### The array_keys() function returns an array containing the keys. 
-$\color{green}{array for a specified key,}$ 
+#### The array_keys() function returns an array containing the keys.
 
+$\color{green}{array for a specified key,}$
 
 #### Syntax
+
 ```php
     array_keys(input_array, search_key_value, strict)
-  
+
 ```
-[-] valu =>  Optional. You can specify a value, then only the keys with this value are returned
-[-] stroct =>  Optional. Used with the value parameter. Possible values:
+
+[-] valu => Optional. You can specify a value, then only the keys with this value are returned
+[-] stroct => Optional. Used with the value parameter. Possible values:
 
 ### Example
 
-```php
+````php
     $a =  ["A"=>"Apple","B"=>"Bol","C"=>"Cat"];
     print_r( array_keys($a));
     ```
@@ -800,32 +819,32 @@ Array ( [0] => B )
     ];
     $properties = array_keys($user, "admin", true);
     print_r($properties);
-```
+````
 
 ### output
+
 Array ( [0] => username )
 
-
-
-
-<!-- =========================array_values==================== --> 
+<!-- =========================array_values==================== -->
 
 > [!TIP]
-> array_values 
+> array_values
 
-#### The array_values() function returns an array containing all the 
-$\color{green}{values of an array.}$ 
+#### The array_values() function returns an array containing all the
 
+$\color{green}{values of an array.}$
 
 #### Syntax
+
 ```php
     array_values($array)
-  
+
 ```
+
 [-] The returned array will have numeric keys, starting at 0 and increase by 1.
 
-
 ### Example
+
 ```php
   $fruits = [
     'apple' => 'Apple',
@@ -836,27 +855,25 @@ $\color{green}{values of an array.}$
 ```
 
 ### output
+
 Array ( [0] => Apple [1] => Orange [2] => Banana )
 
-
-
-
-
-
-<!-- =========================array_column==================== --> 
+<!-- =========================array_column==================== -->
 
 > [!TIP]
-> array_column 
+> array_column
 
-#### The array_values() function returns an array containing all the 
-$\color{green}{values of an array.}$ 
+#### The array_values() function returns an array containing all the
 
+$\color{green}{values of an array.}$
 
 #### Syntax
+
 ```php
     array_values($array)
-  
+
 ```
+
 [-]array=> Required. Specifies the multi-dimensional array (record-set) to use. As of PHP 7.0, this can also be an array of objects.
 
 [-]column_key=>Required. An integer key or a string key name of the column of values to return. This parameter can also be NULL to return complete arrays (useful together with index_key to re-index the array)
@@ -864,6 +881,7 @@ $\color{green}{values of an array.}$
 [-] index_key=> Optional. The column to use as the index/keys for the returned array
 
 ### Example
+
 ```php
         $a = [
         $b =[
@@ -893,78 +911,72 @@ $\color{green}{values of an array.}$
 ```
 
 ### output
+
 Array ( [0] => Islam [1] => Choudhori [2] => Raddy [3] => Khan )
 
-
-
-<!-- =========================Array_key==================== --> 
-
+<!-- =========================Array_key==================== -->
 
 > [!TIP]
 > array_key
 
 #### The key() function returns the element key from the current internal pointer position.
 
-
-
 #### Syntax
+
 ```php
     key(array)
 ```
 
 ### Example
+
 ```php
     $people=array("Peter","Joe","Glenn","Cleveland");
     echo "The key from the current position is: " . key($people);)
 ```
 
 ### output
-  The key from the current position is: 0
 
+The key from the current position is: 0
 
 ### Other Example
-```php 
-<?php 
 
-// input array 
-$arr=array("Ram", "Geeta", "Shita", "Ramu"); 
+```php
+<?php
 
-// next function increase the internal pointer 
-// to point next to the current element. 
-next($arr); 
+// input array
+$arr=array("Ram", "Geeta", "Shita", "Ramu");
 
-// Here key function prints the index of 
-// the current element of the array. 
-echo "The index of the current element of"." the array is: " . key($arr); 
-                
-?> 
+// next function increase the internal pointer
+// to point next to the current element.
+next($arr);
+
+// Here key function prints the index of
+// the current element of the array.
+echo "The index of the current element of"." the array is: " . key($arr);
+
+?>
 ```
 
 ### output
+
 The index of the current element of the array is: 1
 
-
-
-
-
-
-
-<!-- =========================Array_next==================== --> 
-
+<!-- =========================Array_next==================== -->
 
 > [!TIP]
 > next
 
 #### The next() function $\color{green}{firstly moves the current pointer to the next element and returns the element.}$
 
-
 #### Syntax
+
 ```php
    next(array)
 ```
 
 ### Example
-```php
+
+````php
     $people = array("Peter", "Joe", "Glenn", "Cleveland");
 
     echo current($people) . "<br>";
@@ -977,36 +989,36 @@ The index of the current element of the array is: 1
 
 
 ### Other Example
-```php 
+```php
     $arr2 = array("name" => "Amit", "age" => 21, "Gender" => "Male");
 
     echo current($arr2) . "\n"; //print first element
     echo next($arr2) ."\n"; //move to next element and print
     echo next($arr2) ."\n";
-```
+````
 
 ### output
+
 Amit
 21
 Male
 
-
-<!-- =========================current==================== --> 
-
+<!-- =========================current==================== -->
 
 > [!TIP]
 > current
 
-#### The current() function  $\color{green}{returns the value of the current element in an array.}$
-
+#### The current() function $\color{green}{returns the value of the current element in an array.}$
 
 #### Syntax
+
 ```php
    current(array)
 ```
 
 ### Example
-```php
+
+````php
     $people = array("Peter", "Joe", "Glenn", "Cleveland");
 
     echo current($people) . "<br>";
@@ -1018,54 +1030,64 @@ Male
 
 
 ### Other Example
-```php 
-<?php 
+```php
+<?php
 
     $people = array("Peter", "Joe", "Glenn", "Cleveland");
 
-    echo current($people) . "<br>";   
-    echo current($people) . "<br>";         
-?> 
-```
+    echo current($people) . "<br>";
+    echo current($people) . "<br>";
+?>
+````
 
 ### output
+
 Peter
 Joe
 
+### current , Next , Prev , end, reset,
 
-### current , Next , Prev , end, reset, 
 #### Syntax
+
 ```php
    .......(array)
 ```
-
-
 
 ```php
 
 $people = array("Peter", "Joe", "Glenn", "Cleveland");
 
 echo current($people) . "<br>";
-echo next($people) . "<br>"; 
-echo current($people) . "<br>"; 
-echo prev($people) . "<br>"; 
-echo end($people) . "<br>"; 
-echo prev($people) . "<br>"; 
-echo current($people) . "<br>"; 
-echo reset($people) . "<br>"; 
+echo next($people) . "<br>";
+echo current($people) . "<br>";
+echo prev($people) . "<br>";
+echo end($people) . "<br>";
+echo prev($people) . "<br>";
+echo current($people) . "<br>";
+echo reset($people) . "<br>";
 echo next($people) . "<br>" ;
 ```
+
 #### Current $\color{green}{The current element is Peter}$
+
 #### next $\color{green}{The next element of Peter is Joe}$
+
 #### current $\color{green}{Now the current element is Joe}$
+
 #### prev $\color{green}{The previous element of Joe is Peter}$
+
 #### end $\color{green}{The last element is Cleveland}$
+
 #### prev $\color{green}{The previous element of Cleveland is Glenn}$
+
 #### current $\color{green}{Now the current element is Glenn}$
+
 #### reset $\color{green}{Moves the internal pointer to the first element of the array, which is Peter}$
+
 #### next $\color{green}{The next element of Peter is Joe}$
 
 ### Output
+
 Peter
 Joe
 Joe
@@ -1076,29 +1098,21 @@ Glenn
 Peter
 Joe
 
-
-
-
-
-
-
-
-<!-- =========================array_walk==================== --> 
-
+<!-- =========================array_walk==================== -->
 
 > [!TIP]
 > next
 
 #### The array_walk() function runs each array element in a user-defined function. The array's keys and values are parameters in the function.
 
-
-
 #### Syntax
+
 ```php
    array_walk(array, myfunction, parameter...)
 ```
 
 ### Example
+
 ```php
     function myfunction($value,$key,$p)
     {
@@ -1109,13 +1123,14 @@ Joe
 ```
 
 ### output
+
 a has the value red
 b has the value green
 c has the value blue
 
-
 ### Other Example
-```php 
+
+```php
     function myfunction(&$value,$key)
     {
     $value="yellow";
@@ -1126,12 +1141,12 @@ c has the value blue
 ```
 
 ### output
+
 Array ( [a] => yellow [b] => yellow [c] => yellow )
 
-
-
 ### Other Example
-```php 
+
+```php
     function myfunction($value,$key)
     {
     echo "The key $key has the value $value<br>";
@@ -1141,141 +1156,124 @@ Array ( [a] => yellow [b] => yellow [c] => yellow )
 ```
 
 ### output
+
 The key a has the value red
 The key b has the value green
 The key c has the value blue
 
-
-
-
-
-<!-- =========================Array_count==================== --> 
-
+<!-- =========================Array_count==================== -->
 
 > [!TIP]
 > count
 
-#### The count() function  $\color{green}{returns the number of elements in an array}$
-
+#### The count() function $\color{green}{returns the number of elements in an array}$
 
 #### Syntax
+
 ```php
    count(array, mode)
 ```
 
 ### Example
+
 ```php
    $cars=array("Volvo","BMW","Toyota");
     echo count($cars);
 ```
 
 ### output
+
 3
 
-
-
-
-<!--====================Array_count_values================ --> 
-
+<!--====================Array_count_values================ -->
 
 > [!TIP]
->array_count_values
+> array_count_values
 
 #### The array_count_values() function counts all the values of an array. $\color{green}{counts all the values of an array.}$
 
-
 #### Syntax
+
 ```php
    array_count_values(array)
 ```
 
 ### Example
+
 ```php
    $a=array("A","B" ,"Cat","Dog","A","Cat", "Dog","Dog","Dog");
     print_r(array_count_values($a));
 ```
 
 ### output
+
 Array ( [A] => 2 [B] => 1 [Cat] => 2 [Dog] => 4 )
-
-
-
 
 <!--====================array_unique==========---->
 
-
 > [!TIP]
->array_unique
+> array_unique
 
 #### The array_unique() function removes duplicate values from an array. If two or more array values are the same, the first appearance will be kept and the other will be removed.
 
-
-
 #### Syntax
-##### sorttyp -Optional 
+
+##### sorttyp -Optional
+
 ```php
    array_unique(array, sorttype)
 ```
 
 ### Example
+
 ```php
    $a=array("a"=>"red","b"=>"green","c"=>"red");
     print_r(array_unique($a));
 ```
 
 ### output
+
 Array ( [a] => red [b] => green )
-
-
-
-
-
-
 
 <!--==========array_revers=======---->
 
-
 > [!TIP]
->array_revers
+> array_revers
 
 #### The array_reverse() function returns an array in the reverse order.
 
+#### Syntax
 
-
-#### Syntax 
 ```php
    array_reverse(array, preserve)
 ```
 
 ### Example
+
 ```php
    $a=array("a"=>"Volvo","b"=>"BMW","c"=>"Toyota");
         print_r(array_reverse($a));
 ```
 
 ### output
+
 Array ( [c] => Toyota [b] => BMW [a] => Volvo )
-
-
-
-
 
 <!--==========array_fille=======---->
 
-
 > [!TIP]
->array_fille
+> array_fille
 
 #### The array_flip() function flips/exchanges all keys with their associated values in an array.
 
+#### Syntax
 
-
-#### Syntax 
 ```php
    array array_flip($array)
 ```
 
 ### Example
+
 ```php
     $a1=array_fill(3, 5,"blue");
     print_r($a1);
@@ -1286,35 +1284,36 @@ Array ( [c] => Toyota [b] => BMW [a] => Volvo )
 ```
 
 ### output
+
 Array ( [3] => blue [4] => blue [5] => blue [6] => blue [7] => blue )
 Array ( [0] => red [1] => red [2] => red [3] => red [4] => red
 
-
-
-
-
 <!--==========Sorting Arrays=======---->
 
-
 > [!TIP]
->Sorting array
->sort, rsort, asort, ksort, arsort,krsort,
+> Sorting array
+> sort, rsort, asort, ksort, arsort,krsort,
 
-#### Syntax 
+#### Syntax
+
 ```php
    sorign_name($array)
 ```
 
-
 #### sort() - sort arrays in ascending order
+
 #### rsort() - sort arrays in descending order
+
 #### asort() - sort associative arrays in ascending order, according to the value
+
 #### ksort() - sort associative arrays in ascending order, according to the key
+
 #### arsort() - sort associative arrays in descending order, according to the value
+
 #### krsort() - sort associative arrays in descending order, according to the key
 
-
 ### Example
+
 ```php
     $cars = array("Volvo", "BMW", "Toyota");
     sort($cars);
@@ -1342,6 +1341,7 @@ Array ( [0] => red [1] => red [2] => red [3] => red [4] => red
 ```
 
 ### Output
+
 Array ( [0] => BMW [1] => Toyota [2] => Volvo )
 Array ( [0] => Volvo [1] => Toyota [2] => BMW )
 Array ( [Ben] => 37 [Joe] => 43 [Aeter] => 65 )
@@ -1349,24 +1349,21 @@ Array ( [Ben] => 87 [Joe] => 43 [Peter] => 35 )
 Array ( [Joe] => 43 [Ben] => 37 [Peter] => 35 )
 Array ( [0] => Volvo [1] => Toyota [2] => BMW )
 
-
-
-
 <!--=========array_mergs===========--->
 
-
 > [!TIP]
->array_merge
+> array_merge
 
 #### The array_merge() function merges one or more arrays into one array.
 
+#### Syntax
 
-#### Syntax 
 ```php
    array_merge(array1, array2, array3, ...)
- ```
+```
 
- ### Example
+### Example
+
 ```PHP
     $a1=array("red","green");
     $a2=array("blue","yellow");
@@ -1379,93 +1376,121 @@ Array ( [0] => Volvo [1] => Toyota [2] => BMW )
     $res = array_merge($my_array1, $my_array2);
 ```
 
-[-] same key than retrun last array key valu other key valo not return 
+[-] same key than retrun last array key valu other key valo not return
 
 #### Output
+
 Array ( [0] => red [1] => green [2] => blue [3] => yellow )
 Array ( [size] => ium [0] => 2 [1] => 3 [2] => a [3] => b [shape] => circle [4] => 4 )
 
-
-
-
-
-
-
-
 <!--=========shuffle====--->
 
-
 > [!TIP]
->shuffle
+> shuffle
 
 #### The shuffle() function randomizes the order of the elements in the array.
 
+#### Syntax
 
-#### Syntax 
 ```php
    shuffle(array)
- ```
+```
 
- ### Example
+### Example
+
 ```PHP
     $my_array = array("red","green","blue","yellow","purple");
 
     shuffle($my_array);
     print_r($my_array);
 ```
+
 #### Output
+
 Array ( [0] => yellow [1] => purple [2] => red [3] => blue [4] => green )
-
-
-
-
 
 <!-- =============array_combine================ -->
 
-
 > [!TIP]
->array_combine
+> array_combine
 
 #### Create an array by using the elements from one "keys" array and one "values" array:
 
+#### Syntax
 
-
-#### Syntax 
 ```php
    array_combine(keys, values)
- ```
+```
 
- ### Example
+### Example
+
 ```PHP
     $fname = ["Peter", "Ben", " Joe"];
     $age = [23,45,42];
 
 ```
+
 #### Output
+
 Array ( [Peter] => 23 [Ben] => 45 [ Joe] => 42 )
-
-
-
 
 <!-- =============array_slice================ -->
 
-
 > [!TIP]
->array_slice
+> array_slice
 
 #### The array_slice() function returns selected parts of an array.
 
+#### Syntax
 
-#### Syntax 
 ```php
    array_slice($array, $start_point, $slicing_range, preserve)
- ```
+```
 
- ### Example
+### Example
+
 ```PHP
     $a=array("red","green","blue","yellow","brown");
     print_r(array_slice($a,1,2));
 
 ```
+
 #### Output
+
 Array ( [0] => green [1] => blue )
+
+## OOP
+
+#### Creat Object
+
+```php
+class calculation{
+    public $a, $b, $c;
+
+    function addison(){
+        $this->c = $this->a + $this->b;
+        return $this->c;
+    }
+    function sub(){
+        $this->c = $this->a - $this->b; // Changed to proper subtraction logic
+        return $this->c;
+    }
+}
+
+//first Objeect
+$sum = new calculation();
+$sum->a = 30;
+$sum->b = 20;
+
+//secend Object
+$sub  = new calculation();
+$sub->a = 50;
+$sub->b = 40;
+
+
+echo "sub value sub : " . $sub->sub() ."\n" ;
+echo "sum value of : " . $sum->addison() ."\n";
+echo "addison value in  sub ". $sub->addison() ."\n";
+
+
+```
