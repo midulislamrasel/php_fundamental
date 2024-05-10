@@ -1,4 +1,5 @@
 <?php include 'header.php'; ?>
+<?php include 'db.config.php' ?>
 <div id="main-content">
     <h2>Add New Record</h2>
     <form class="post-form" action="savedata.php" method="post">
@@ -14,18 +15,27 @@
             <label>Class</label>
             <select name="class">
                 <option value="" selected disabled>Select Class</option>
-                <option value="1">BCA</option>
-                <option value="2">BSC</option>
-                <option value="3">B.TECH</option>
+
+                <?php
+                $sql = "SELECT * FROM studentclass";
+                $result = mysqli_query($conn, $sql) or die("Query Unsuccessfull");
+
+                while ($row = mysqli_fetch_assoc($result)) {
+
+                ?>
+
+                    <option value="<?= $row['cid'] ?>"> <?= $row['cname'] ?></option>
+                <?php } ?>
             </select>
         </div>
         <div class="form-group">
             <label>Phone</label>
             <input type="text" name="sphone" />
         </div>
-        <input class="submit" type="submit" value="Save"  />
+        <input class="submit" type="submit" value="Save" />
     </form>
 </div>
 </div>
 </body>
+
 </html>
