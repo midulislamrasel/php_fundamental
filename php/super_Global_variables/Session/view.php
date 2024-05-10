@@ -16,7 +16,11 @@ echo "<br>";
 
 <body>
     <?php
-    echo "Favorite Color : " . $_SESSION['favcolor'];
+    if (isset($_SESSION['favcolor'])) {
+        echo "Favorite Color : " . $_SESSION['favcolor'];
+    } else {
+        echo " NO Session";
+    }
     ?>
 </body>
 
